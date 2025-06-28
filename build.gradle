@@ -39,6 +39,10 @@ application {
   mainClass = 'org.plumelib.bibtex.BibtexClean'
 }
 
+tasks.withType(JavaCompile) {
+  options.release = 11
+}
+
 test {
   useJUnitPlatform {
     includeEngines 'junit-jupiter'
